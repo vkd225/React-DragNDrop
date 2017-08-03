@@ -4,8 +4,6 @@ import { DropTarget } from 'react-dnd';
 import ItemTypes from './ItemTypes.jsx';
 import Frame from 'react-frame-component';
 
-import ImageWidget from './imgwidget.jsx';
-
 
 const boxTarget = {
   drop() {

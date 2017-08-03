@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { DragDropContextProvider } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
-import Frame from 'react-frame-component';
 import Dustbin from './Dustbin.jsx';
 import Box from './Box.jsx';
-
-import ImageWidget from './imgwidget.jsx';
 
 export default class Container extends Component {
     constructor(){
@@ -29,12 +26,15 @@ export default class Container extends Component {
             <DragDropContextProvider backend={HTML5Backend}>
               <div>
 
-                <div style={{ height: '50%', overflow: 'hidden', clear: 'both' }}>
+                <div style={{overflow: 'hidden', clear: 'both' }}>
                     <Dustbin elms={this.state.elms}/>
                 </div>
 
                 <div style={{ overflow: 'hidden', clear: 'both' }}>
-                    <Box name="Image Full Width" add={this.add}/>
+                    <Box name="Image Widget" add={this.add}/>
+                    <Box name="Heading H1" add={this.add}/>
+                    <Box name="Heading H2" add={this.add}/>
+                    <Box name="Paragraph" add={this.add}/>
                 </div>
               </div>
             </DragDropContextProvider>
