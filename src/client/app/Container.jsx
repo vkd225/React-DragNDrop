@@ -31,10 +31,8 @@ export default class Container extends Component {
                 </div>
 
                 <div style={{ overflow: 'hidden', clear: 'both' }}>
-                    <Box name="Image Widget" add={this.add}/>
-                    <Box name="Heading H1" add={this.add}/>
-                    <Box name="Heading H2" add={this.add}/>
-                    <Box name="Paragraph" add={this.add}/>
+                    <Box name="ImageWidget" add={this.add}/>
+                    <Box name="AwesomeComponent" add={this.add}/>
                 </div>
               </div>
             </DragDropContextProvider>

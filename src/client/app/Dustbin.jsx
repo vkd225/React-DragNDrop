@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { DropTarget } from 'react-dnd';
 import ItemTypes from './ItemTypes.jsx';
 import Frame from 'react-frame-component';
-import ImageWidget from './imgwidget.jsx';
+import ImageWidget from './Components/imgwidget.jsx';
+import AwesomeComponent from './Components/AwesomeComponent.jsx';
 
 const boxTarget = {
   drop() {
@@ -31,10 +32,18 @@ class Dustbin extends Component {
     //   return  <div key={idx + 'img'}>{e}</div>;
     // });
 
-    const elms = this.props.elms.map((e, idx) => {
-      return  <div key={idx + 'img'}> <ImageWidget /> </div>;
-    });
 
+    const elms = this.props.elms.map((e, idx) => {
+      switch (e) {
+        case "ImageWidget":
+          return  <div key={idx + 'img'}> <ImageWidget /> </div>;
+          break ;
+
+        case "AwesomeComponent":
+          return <div key={idx + 'img'}> <AwesomeComponent /> </div>;
+          break ;
+      }
+    });
 
     return connectDropTarget(
       <div>
@@ -45,7 +54,6 @@ class Dustbin extends Component {
     );
   }
 }
-
 
 Dustbin.propTypes = {
   connectDropTarget: PropTypes.func.isRequired,

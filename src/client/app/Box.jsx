@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { DragSource } from 'react-dnd';
 import ItemTypes from './ItemTypes.jsx';
 
-import ImageWidget from './imgwidget.jsx';
-
 const boxSource = {
   beginDrag(props) {
     return {
