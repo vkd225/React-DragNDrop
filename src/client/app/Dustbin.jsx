@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { DropTarget } from 'react-dnd';
 import ItemTypes from './ItemTypes.jsx';
 import Frame from 'react-frame-component';
-
+import ImageWidget from './imgwidget.jsx';
 
 const boxTarget = {
   drop() {
@@ -27,9 +27,14 @@ class Dustbin extends Component {
     const isActive = canDrop && isOver;
 
 
+    // const elms = this.props.elms.map((e, idx) => {
+    //   return  <div key={idx + 'img'}>{e}</div>;
+    // });
+
     const elms = this.props.elms.map((e, idx) => {
-      return  <div key={idx + 'img'}>{e}</div>;
+      return  <div key={idx + 'img'}> <ImageWidget /> </div>;
     });
+
 
     return connectDropTarget(
       <div>
