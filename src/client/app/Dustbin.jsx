@@ -6,12 +6,20 @@ import Frame from 'react-frame-component';
 import ImageWidget from './Components/imgwidget.jsx';
 import AwesomeComponent from './Components/AwesomeComponent.jsx';
 
+
+const styles = {
+  Dustbin: {
+    width: '80%',
+    height: '80%'
+  }
+};
+
+
 const boxTarget = {
   drop() {
     return { name: 'Dustbin' };
   },
 };
-
 
 function collect(connect, monitor) {
   return {
@@ -39,7 +47,7 @@ class Dustbin extends Component {
           return  <div key={idx + 'img'}> <ImageWidget /> </div>;
           break ;
 
-        case "AwesomeComponent":
+        case "LikeMe":
           return <div key={idx + 'img'}> <AwesomeComponent /> </div>;
           break ;
       }
@@ -47,8 +55,8 @@ class Dustbin extends Component {
 
     return connectDropTarget(
       <div>
-        <Frame style={{ width: '80%', height: '80%' }}>
-        {elms}
+        <Frame style={ styles.Dustbin }>
+          {elms}
         </Frame>
       </div>
     );

@@ -30,9 +30,9 @@ export default class Container extends Component {
                     <Dustbin elms={this.state.elms}/>
                 </div>
 
-                <div style={{ overflow: 'hidden', clear: 'both' }}>
+                <div className= "sidebar">
                     <Box name="ImageWidget" add={this.add}/>
-                    <Box name="AwesomeComponent" add={this.add}/>
+                    <Box name="LikeMe" add={this.add}/>
                 </div>
               </div>
             </DragDropContextProvider>
