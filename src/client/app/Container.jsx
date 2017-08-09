@@ -25,14 +25,15 @@ export default class Container extends Component {
         return (
             <DragDropContextProvider backend={HTML5Backend}>
               <div>
-
-                <div style={{overflow: 'hidden', clear: 'both' }}>
+                <div style={{float: 'left', width: '70%'}}>
                     <Dustbin elms={this.state.elms}/>
                 </div>
 
-                <div className= "sidebar">
+                <div style={{float: 'left', width: '20%'}}>
+                    <h2>Widgets</h2>
                     <Box name="ImageWidget" add={this.add}/>
                     <Box name="LikeMe" add={this.add}/>
+                    <Box name="H1" add={this.add}/>
                 </div>
               </div>
             </DragDropContextProvider>

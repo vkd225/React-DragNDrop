@@ -58,7 +58,7 @@ class Box extends Component {
                       marginRight: '1.5rem',
                       marginBottom: '1.5rem',
                       cursor: 'move',
-                      float: 'left', opacity }}>
+                      float: 'left' }}>
           {name}
         </div>,
       )

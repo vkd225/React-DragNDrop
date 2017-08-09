@@ -5,11 +5,12 @@ import ItemTypes from './ItemTypes.jsx';
 import Frame from 'react-frame-component';
 import ImageWidget from './Components/imgwidget.jsx';
 import AwesomeComponent from './Components/AwesomeComponent.jsx';
+import Heading1 from './Components/Heading1.jsx';
 
 
 const styles = {
   Dustbin: {
-    width: '80%',
+    width: '70%',
     height: '80%'
   }
 };
@@ -44,12 +45,16 @@ class Dustbin extends Component {
     const elms = this.props.elms.map((e, idx) => {
       switch (e) {
         case "ImageWidget":
-          return  <div key={idx + 'img'}> <ImageWidget /> </div>;
+          return  <div key={idx + 'img'}> <ImageWidget /></div>;
           break ;
 
         case "LikeMe":
-          return <div key={idx + 'img'}> <AwesomeComponent /> </div>;
+          return <div key={idx + 'img'}> <AwesomeComponent /></div>;
           break ;
+
+        case "H1":
+          return <div key={idx + 'img'}> <Heading1 /></div>;
+          break;
       }
     });
 
