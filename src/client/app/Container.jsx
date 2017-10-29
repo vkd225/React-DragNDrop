@@ -25,11 +25,12 @@ export default class Container extends Component {
         return (
             <DragDropContextProvider backend={HTML5Backend}>
               <div>
-                <div style={{float: 'left', width: '70%'}}>
+              	<h2>Drop the Components here to render them</h2>
+                <div style={{float: 'left', width: '100%'}}>
                     <Dustbin elms={this.state.elms}/>
                 </div>
 
-                <div style={{float: 'left', width: '20%'}}>
+                <div style={{float: 'left', width: '30%'}}>
                     <h2>Widgets</h2>
                     <Box name="ImageWidget" add={this.add}/>
                     <Box name="LikeMe" add={this.add}/>
